@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style>
+        table,  td {
+            
+            border: 1px solid black;
+            width : 240px;
+        }
+        tr {
+            border: 1px solid rgb(190, 190, 190);       
+            background-color: #e0e271;
+            height:40px;
+        }
+    </style>
+
+    <script>
+        function esempioDown(){
+            console.log("DOWN")
+     
+        }
+        function esempioUp(){
+            console.log("UP")
+        }
+        function validate(e){
+           var UserName = document.getElementById("UserName");
+           var Pass     = document.getElementById("Pass");
+           if(UserName.value==""){
+                e.preventDefault()
+                return false;
+
+           }
+           if(Pass.value==""){
+                 e.preventDefault()
+                return false;
+           }
+         //CONTROLARE SE L'EMAIL CONTIENE UNA CHIOCCIOLA E UN PUNTO ES EMAIL@MAI.LL
+           Pass.value=btoa(Pass.value);
+           return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>ESEMPIO TABELLA</h1>
+
+
+<form  action="PaginaInterna.html" onsubmit="validate(event)">
+    <labe>User Name</labe>
+    <input type="text" id="UserName" name="UserName">
+    <labe>Password</labe>
+    <input type="password" id="Pass" name="prova" >
+    <input type="submit" onmousedown="esempioDown()" onmouseup="esempioUp()"  />
+    <!--aggiungere EMAIL-->
+</form>
+<!--CREARE UN ESEMPIO DI FORM ALTERNATIVO CHE INVII UN CONTENUTO A UNA PAGINA CHIAMATA ESEMPIO2.HTML-->
+
+<br>
+<br>
+
+
+</body>
+
+</html>
