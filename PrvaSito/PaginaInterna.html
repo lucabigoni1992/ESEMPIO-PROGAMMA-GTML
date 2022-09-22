@@ -15,7 +15,11 @@
 
     <script>
         var cella = 1
-        
+  
+        window.onload = function(e){             
+            var elemento =document.getElementById('UserName');
+            elemento.innerText=localStorage.getItem("UserName");
+        }
         function Scendi(){
 
          restContentCell();
@@ -152,6 +156,9 @@
 </head>
 
 <body>
+
+    <label id="UserName"> </label>
+
     <h1>ESEMPIO TABELLA</h1>
 
 <table>
